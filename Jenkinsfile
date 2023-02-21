@@ -17,7 +17,8 @@ pipeline {
 
         stage('Front-end Unit test') {
           steps {
-            sh '   node --version && cd curriculum-front && npm run test:unit'
+            sh '''   node --version && npm install -g @vue/cli && vue --version
+&& cd curriculum-front && npm run test:unit'''
           }
         }
 
