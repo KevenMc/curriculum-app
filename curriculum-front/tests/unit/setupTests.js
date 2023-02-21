@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuetify from 'vuetify'
 import { createLocalVue } from '@vue/test-utils'
 
+console.log("****************************************************************************************")
 Vue.use(Vuetify)
 Vue.config.productionTip = false
 
