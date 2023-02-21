@@ -1,6 +1,5 @@
 pipeline {
   agent any
-  tools {nodejs "node"}
   stages {
     stage('Checkout Code') {
       steps {
@@ -18,12 +17,15 @@ pipeline {
 
         stage('Front-end Unit test') {
           steps {
-            sh '   node --version && cd curriculum-front && npm i && npm install --save-dev vue-jest && npm run test:unit'
+            sh '   node --version && cd curriculum-front && npm run test:unit'
           }
         }
 
       }
     }
 
+  }
+  tools {
+    nodejs 'node'
   }
 }
